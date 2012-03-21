@@ -1,0 +1,44 @@
+#! /bin/ksh
+
+set -x
+
+NN_NAME="Logorrhea"
+LS_NAME="Logorrhea_Source_1.3.1"
+TMP_NAME="TMP"
+
+# Get source if we didn't already get it
+if [[ ! -d $LS_NAME ]] 
+then
+	hdiutil attach "http://spiny.com/logorrhea/${LS_NAME}.dmg"
+	cp -R /Volumes/$LS_NAME .
+	umount /Volumes/$LS_NAME 
+fi
+
+# Save old project in /tmp
+rm -rf /tmp/$NN_NAME
+cp -R $NN_NAME /tmp/$NN_NAME
+rm -rf $NN_NAME
+
+# Patch the originals
+mv $LS_NAME $TMP_NAME
+cp -R $TMP_NAME $LS_NAME 
+
+patch -s -p0 -i ${NN_NAME}.patch
+
+mv $LS_NAME $NN_NAME
+mv $TMP_NAME $LS_NAME
+
+# Build it - 
+cd $NN_NAME
+whence xcodebuild
+if [[ "$?"  == "0" ]]
+then 
+	pwd
+	ls
+	xcodebuild -target "$NN_NAME" -configuration "Deployment" buildaction install
+else
+	open -a Xcode ${NN_NAME}.xcodeproj
+fi
+
+print "If everything went OK, the latest $NN_NAME is installed in /Applications"
+

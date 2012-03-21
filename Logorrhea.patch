@@ -1,6 +1,6 @@
 diff -ruN Logorrhea_Source_1.3.1/AGRegex/AGRegex.m Logorrhea/AGRegex/AGRegex.m
---- Logorrhea_Source_1.3.1/AGRegex/AGRegex.m	2012-03-20 17:19:46.000000000 -0400
-+++ Logorrhea/AGRegex/AGRegex.m	2012-03-20 09:10:58.000000000 -0400
+--- Logorrhea_Source_1.3.1/AGRegex/AGRegex.m	2012-03-20 17:52:46.000000000 -0400
++++ Logorrhea/AGRegex/AGRegex.m	2012-03-20 17:52:46.000000000 -0400
 @@ -37,7 +37,7 @@
  
  // count the number of UTF-8 characters in a string
@@ -89,7 +89,7 @@ diff -ruN Logorrhea_Source_1.3.1/AGRegex/AGRegex.m Logorrhea/AGRegex/AGRegex.m
  
  - (int)count {
 diff -ruN Logorrhea_Source_1.3.1/AGRegex/chartables.c Logorrhea/AGRegex/chartables.c
---- Logorrhea_Source_1.3.1/AGRegex/chartables.c	2012-03-20 17:19:46.000000000 -0400
+--- Logorrhea_Source_1.3.1/AGRegex/chartables.c	2012-03-20 17:52:46.000000000 -0400
 +++ Logorrhea/AGRegex/chartables.c	1969-12-31 19:00:00.000000000 -0500
 @@ -1,183 +0,0 @@
 -/*************************************************
@@ -277,7 +277,7 @@ diff -ruN Logorrhea_Source_1.3.1/AGRegex/chartables.c Logorrhea/AGRegex/chartabl
 -/* End of chartables.c */
 diff -ruN Logorrhea_Source_1.3.1/AGRegex/chartables.h Logorrhea/AGRegex/chartables.h
 --- Logorrhea_Source_1.3.1/AGRegex/chartables.h	1969-12-31 19:00:00.000000000 -0500
-+++ Logorrhea/AGRegex/chartables.h	2009-06-06 11:22:50.000000000 -0400
++++ Logorrhea/AGRegex/chartables.h	2012-03-20 17:52:46.000000000 -0400
 @@ -0,0 +1,183 @@
 +/*************************************************
 +*      Perl-Compatible Regular Expressions       *
@@ -463,8 +463,8 @@ diff -ruN Logorrhea_Source_1.3.1/AGRegex/chartables.h Logorrhea/AGRegex/chartabl
 +
 +/* End of chartables.c */
 diff -ruN Logorrhea_Source_1.3.1/AGRegex/get.c Logorrhea/AGRegex/get.c
---- Logorrhea_Source_1.3.1/AGRegex/get.c	2012-03-20 17:19:46.000000000 -0400
-+++ Logorrhea/AGRegex/get.c	2012-03-20 09:03:09.000000000 -0400
+--- Logorrhea_Source_1.3.1/AGRegex/get.c	2012-03-20 17:52:46.000000000 -0400
++++ Logorrhea/AGRegex/get.c	2012-03-20 17:52:46.000000000 -0400
 @@ -198,7 +198,7 @@
    const char ***listptr)
  {
@@ -475,8 +475,8 @@ diff -ruN Logorrhea_Source_1.3.1/AGRegex/get.c Logorrhea/AGRegex/get.c
  char **stringlist;
  char *p;
 diff -ruN Logorrhea_Source_1.3.1/AGRegex/internal.h Logorrhea/AGRegex/internal.h
---- Logorrhea_Source_1.3.1/AGRegex/internal.h	2012-03-20 17:19:46.000000000 -0400
-+++ Logorrhea/AGRegex/internal.h	2009-06-06 14:23:59.000000000 -0400
+--- Logorrhea_Source_1.3.1/AGRegex/internal.h	2012-03-20 17:52:46.000000000 -0400
++++ Logorrhea/AGRegex/internal.h	2012-03-20 17:52:46.000000000 -0400
 @@ -595,6 +595,10 @@
  /* Structure for passing "static" information around between the functions
  doing the matching, so that they are thread-safe. */
@@ -489,8 +489,8 @@ diff -ruN Logorrhea_Source_1.3.1/AGRegex/internal.h Logorrhea/AGRegex/internal.h
    int    match_call_count;      /* As it says */
    int    match_limit;           /* As it says */
 diff -ruN Logorrhea_Source_1.3.1/AGRegex/pcre.c Logorrhea/AGRegex/pcre.c
---- Logorrhea_Source_1.3.1/AGRegex/pcre.c	2012-03-20 17:19:46.000000000 -0400
-+++ Logorrhea/AGRegex/pcre.c	2009-06-06 11:23:53.000000000 -0400
+--- Logorrhea_Source_1.3.1/AGRegex/pcre.c	2012-03-20 17:52:46.000000000 -0400
++++ Logorrhea/AGRegex/pcre.c	2012-03-20 17:52:46.000000000 -0400
 @@ -303,7 +303,7 @@
  whenever the caller of pcre_compile() does not provide an alternate set of
  tables. */
@@ -501,8 +501,8 @@ diff -ruN Logorrhea_Source_1.3.1/AGRegex/pcre.c Logorrhea/AGRegex/pcre.c
  
  
 diff -ruN Logorrhea_Source_1.3.1/AGRegex/study.c Logorrhea/AGRegex/study.c
---- Logorrhea_Source_1.3.1/AGRegex/study.c	2012-03-20 17:19:46.000000000 -0400
-+++ Logorrhea/AGRegex/study.c	2012-03-20 08:17:38.000000000 -0400
+--- Logorrhea_Source_1.3.1/AGRegex/study.c	2012-03-20 17:52:46.000000000 -0400
++++ Logorrhea/AGRegex/study.c	2012-03-20 17:52:46.000000000 -0400
 @@ -90,6 +90,7 @@
  {
  register int c;
@@ -529,8 +529,8 @@ diff -ruN Logorrhea_Source_1.3.1/AGRegex/study.c Logorrhea/AGRegex/study.c
        tcode += 1+LINK_SIZE;
        break;
 diff -ruN Logorrhea_Source_1.3.1/AddressBookUtils.m Logorrhea/AddressBookUtils.m
---- Logorrhea_Source_1.3.1/AddressBookUtils.m	2012-03-20 17:19:46.000000000 -0400
-+++ Logorrhea/AddressBookUtils.m	2012-03-20 09:20:00.000000000 -0400
+--- Logorrhea_Source_1.3.1/AddressBookUtils.m	2012-03-20 17:52:46.000000000 -0400
++++ Logorrhea/AddressBookUtils.m	2012-03-20 17:52:46.000000000 -0400
 @@ -10,25 +10,36 @@
  
  
@@ -574,8 +574,8 @@ diff -ruN Logorrhea_Source_1.3.1/AddressBookUtils.m Logorrhea/AddressBookUtils.m
  }
  
 diff -ruN Logorrhea_Source_1.3.1/AppController.m Logorrhea/AppController.m
---- Logorrhea_Source_1.3.1/AppController.m	2012-03-20 17:19:46.000000000 -0400
-+++ Logorrhea/AppController.m	2012-03-20 10:56:51.000000000 -0400
+--- Logorrhea_Source_1.3.1/AppController.m	2012-03-20 17:52:46.000000000 -0400
++++ Logorrhea/AppController.m	2012-03-20 17:52:46.000000000 -0400
 @@ -8,8 +8,16 @@
  
  #import "AppController.h"
@@ -767,8 +767,8 @@ diff -ruN Logorrhea_Source_1.3.1/AppController.m Logorrhea/AppController.m
  	//The Reveal Chat in Finder menu item has the tag 1
  	SEL action = [menuItem action];
 diff -ruN Logorrhea_Source_1.3.1/Buddy.h Logorrhea/Buddy.h
---- Logorrhea_Source_1.3.1/Buddy.h	2012-03-20 17:19:46.000000000 -0400
-+++ Logorrhea/Buddy.h	2012-03-20 09:07:37.000000000 -0400
+--- Logorrhea_Source_1.3.1/Buddy.h	2012-03-20 17:52:46.000000000 -0400
++++ Logorrhea/Buddy.h	2012-03-20 17:52:46.000000000 -0400
 @@ -7,7 +7,6 @@
  //
  
@@ -778,8 +778,8 @@ diff -ruN Logorrhea_Source_1.3.1/Buddy.h Logorrhea/Buddy.h
  @class Chat;
  
 diff -ruN Logorrhea_Source_1.3.1/Buddy.m Logorrhea/Buddy.m
---- Logorrhea_Source_1.3.1/Buddy.m	2012-03-20 17:19:46.000000000 -0400
-+++ Logorrhea/Buddy.m	2012-03-20 09:07:37.000000000 -0400
+--- Logorrhea_Source_1.3.1/Buddy.m	2012-03-20 17:52:46.000000000 -0400
++++ Logorrhea/Buddy.m	2012-03-20 17:52:46.000000000 -0400
 @@ -8,6 +8,7 @@
  
  #import "Buddy.h"
@@ -826,8 +826,8 @@ diff -ruN Logorrhea_Source_1.3.1/Buddy.m Logorrhea/Buddy.m
  	return hash;
  }
 diff -ruN Logorrhea_Source_1.3.1/Chat.h Logorrhea/Chat.h
---- Logorrhea_Source_1.3.1/Chat.h	2012-03-20 17:19:46.000000000 -0400
-+++ Logorrhea/Chat.h	2009-06-06 12:31:06.000000000 -0400
+--- Logorrhea_Source_1.3.1/Chat.h	2012-03-20 17:52:46.000000000 -0400
++++ Logorrhea/Chat.h	2012-03-20 17:52:46.000000000 -0400
 @@ -6,7 +6,7 @@
  //  Copyright (c) 2002 Spiny Software. All rights reserved.
  //
@@ -838,8 +838,8 @@ diff -ruN Logorrhea_Source_1.3.1/Chat.h Logorrhea/Chat.h
  
  @class Buddy;
 diff -ruN Logorrhea_Source_1.3.1/Chat.mm Logorrhea/Chat.mm
---- Logorrhea_Source_1.3.1/Chat.mm	2012-03-20 17:19:46.000000000 -0400
-+++ Logorrhea/Chat.mm	2012-03-20 10:53:49.000000000 -0400
+--- Logorrhea_Source_1.3.1/Chat.mm	2012-03-20 17:52:46.000000000 -0400
++++ Logorrhea/Chat.mm	2012-03-20 17:52:46.000000000 -0400
 @@ -15,19 +15,17 @@
  
  - (id)initWithBuddy:(Buddy *)buddy path:(NSString *)path
@@ -1002,7 +1002,7 @@ diff -ruN Logorrhea_Source_1.3.1/Chat.mm Logorrhea/Chat.mm
  - (NSArray *) participants
 Binary files Logorrhea_Source_1.3.1/English.lproj/InfoPlist.strings and Logorrhea/English.lproj/InfoPlist.strings differ
 diff -ruN Logorrhea_Source_1.3.1/English.lproj/MainMenu.nib/classes.nib Logorrhea/English.lproj/MainMenu.nib/classes.nib
---- Logorrhea_Source_1.3.1/English.lproj/MainMenu.nib/classes.nib	2012-03-20 17:19:46.000000000 -0400
+--- Logorrhea_Source_1.3.1/English.lproj/MainMenu.nib/classes.nib	2012-03-20 17:52:46.000000000 -0400
 +++ Logorrhea/English.lproj/MainMenu.nib/classes.nib	1969-12-31 19:00:00.000000000 -0500
 @@ -1,36 +0,0 @@
 -{
@@ -1044,7 +1044,7 @@ diff -ruN Logorrhea_Source_1.3.1/English.lproj/MainMenu.nib/classes.nib Logorrhe
 \ No newline at end of file
 diff -ruN Logorrhea_Source_1.3.1/English.lproj/MainMenu.nib/designable.nib Logorrhea/English.lproj/MainMenu.nib/designable.nib
 --- Logorrhea_Source_1.3.1/English.lproj/MainMenu.nib/designable.nib	1969-12-31 19:00:00.000000000 -0500
-+++ Logorrhea/English.lproj/MainMenu.nib/designable.nib	2012-03-20 07:52:12.000000000 -0400
++++ Logorrhea/English.lproj/MainMenu.nib/designable.nib	2012-03-20 17:52:46.000000000 -0400
 @@ -0,0 +1,2039 @@
 +<?xml version="1.0" encoding="UTF-8"?>
 +<archive type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="8.00">
@@ -3086,7 +3086,7 @@ diff -ruN Logorrhea_Source_1.3.1/English.lproj/MainMenu.nib/designable.nib Logor
 +	</data>
 +</archive>
 diff -ruN Logorrhea_Source_1.3.1/English.lproj/MainMenu.nib/info.nib Logorrhea/English.lproj/MainMenu.nib/info.nib
---- Logorrhea_Source_1.3.1/English.lproj/MainMenu.nib/info.nib	2012-03-20 17:19:46.000000000 -0400
+--- Logorrhea_Source_1.3.1/English.lproj/MainMenu.nib/info.nib	2012-03-20 17:52:46.000000000 -0400
 +++ Logorrhea/English.lproj/MainMenu.nib/info.nib	1969-12-31 19:00:00.000000000 -0500
 @@ -1,21 +0,0 @@
 -<?xml version="1.0" encoding="UTF-8"?>
@@ -3113,8 +3113,8 @@ diff -ruN Logorrhea_Source_1.3.1/English.lproj/MainMenu.nib/info.nib Logorrhea/E
 Binary files Logorrhea_Source_1.3.1/English.lproj/MainMenu.nib/keyedobjects.nib and Logorrhea/English.lproj/MainMenu.nib/keyedobjects.nib differ
 Binary files Logorrhea_Source_1.3.1/English.lproj/MainMenu.nib/objects.nib and Logorrhea/English.lproj/MainMenu.nib/objects.nib differ
 diff -ruN Logorrhea_Source_1.3.1/FileAttributes.h Logorrhea/FileAttributes.h
---- Logorrhea_Source_1.3.1/FileAttributes.h	2012-03-20 17:19:46.000000000 -0400
-+++ Logorrhea/FileAttributes.h	2012-03-20 09:10:41.000000000 -0400
+--- Logorrhea_Source_1.3.1/FileAttributes.h	2012-03-20 17:52:46.000000000 -0400
++++ Logorrhea/FileAttributes.h	2012-03-20 17:52:46.000000000 -0400
 @@ -10,8 +10,6 @@
  
  
@@ -3125,8 +3125,8 @@ diff -ruN Logorrhea_Source_1.3.1/FileAttributes.h Logorrhea/FileAttributes.h
  + (NSDate *) getCreationDateForPath:(NSString *) path;
  
 diff -ruN Logorrhea_Source_1.3.1/FileAttributes.m Logorrhea/FileAttributes.m
---- Logorrhea_Source_1.3.1/FileAttributes.m	2012-03-20 17:19:46.000000000 -0400
-+++ Logorrhea/FileAttributes.m	2012-03-20 09:10:41.000000000 -0400
+--- Logorrhea_Source_1.3.1/FileAttributes.m	2012-03-20 17:52:46.000000000 -0400
++++ Logorrhea/FileAttributes.m	2012-03-20 17:52:46.000000000 -0400
 @@ -8,15 +8,15 @@
  
  #import "FileAttributes.h"
@@ -3160,8 +3160,8 @@ diff -ruN Logorrhea_Source_1.3.1/FileAttributes.m Logorrhea/FileAttributes.m
  	return result;
  }
 diff -ruN Logorrhea_Source_1.3.1/Info.plist Logorrhea/Info.plist
---- Logorrhea_Source_1.3.1/Info.plist	2012-03-20 17:19:46.000000000 -0400
-+++ Logorrhea/Info.plist	2012-03-20 17:07:55.000000000 -0400
+--- Logorrhea_Source_1.3.1/Info.plist	2012-03-20 17:52:46.000000000 -0400
++++ Logorrhea/Info.plist	2012-03-20 17:52:46.000000000 -0400
 @@ -1,5 +1,5 @@
  <?xml version="1.0" encoding="UTF-8"?>
 -<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -3198,8 +3198,8 @@ diff -ruN Logorrhea_Source_1.3.1/Info.plist Logorrhea/Info.plist
  	<string>MainMenu</string>
  	<key>NSPrincipalClass</key>
 diff -ruN Logorrhea_Source_1.3.1/InstantMessage.h Logorrhea/InstantMessage.h
---- Logorrhea_Source_1.3.1/InstantMessage.h	2012-03-20 17:19:46.000000000 -0400
-+++ Logorrhea/InstantMessage.h	2012-03-20 10:53:19.000000000 -0400
+--- Logorrhea_Source_1.3.1/InstantMessage.h	2012-03-20 17:52:46.000000000 -0400
++++ Logorrhea/InstantMessage.h	2012-03-20 17:52:46.000000000 -0400
 @@ -25,5 +25,13 @@
  - (NSDate *)date;
  - (NSAttributedString *)text;
@@ -3215,8 +3215,8 @@ diff -ruN Logorrhea_Source_1.3.1/InstantMessage.h Logorrhea/InstantMessage.h
  
  @end
 diff -ruN Logorrhea_Source_1.3.1/InstantMessage.m Logorrhea/InstantMessage.m
---- Logorrhea_Source_1.3.1/InstantMessage.m	2012-03-20 17:19:46.000000000 -0400
-+++ Logorrhea/InstantMessage.m	2012-03-20 10:53:47.000000000 -0400
+--- Logorrhea_Source_1.3.1/InstantMessage.m	2012-03-20 17:52:46.000000000 -0400
++++ Logorrhea/InstantMessage.m	2012-03-20 17:52:46.000000000 -0400
 @@ -20,19 +20,19 @@
  {
  	if ([decoder allowsKeyedCoding])
@@ -3269,8 +3269,8 @@ diff -ruN Logorrhea_Source_1.3.1/InstantMessage.m Logorrhea/InstantMessage.m
 +@end
 +
 diff -ruN Logorrhea_Source_1.3.1/LogReader.m Logorrhea/LogReader.m
---- Logorrhea_Source_1.3.1/LogReader.m	2012-03-20 17:19:46.000000000 -0400
-+++ Logorrhea/LogReader.m	2012-03-20 09:06:45.000000000 -0400
+--- Logorrhea_Source_1.3.1/LogReader.m	2012-03-20 17:52:46.000000000 -0400
++++ Logorrhea/LogReader.m	2012-03-20 17:52:46.000000000 -0400
 @@ -10,6 +10,7 @@
  #import "AddressBookUtils.h"
  #import "AppController.h"
@@ -3324,7 +3324,7 @@ diff -ruN Logorrhea_Source_1.3.1/LogReader.m Logorrhea/LogReader.m
      [searchResults removeAllObjects];
      
 diff -ruN Logorrhea_Source_1.3.1/Logorrhea.pbproj/jan.pbxuser Logorrhea/Logorrhea.pbproj/jan.pbxuser
---- Logorrhea_Source_1.3.1/Logorrhea.pbproj/jan.pbxuser	2012-03-20 17:19:46.000000000 -0400
+--- Logorrhea_Source_1.3.1/Logorrhea.pbproj/jan.pbxuser	2012-03-20 17:52:46.000000000 -0400
 +++ Logorrhea/Logorrhea.pbproj/jan.pbxuser	1969-12-31 19:00:00.000000000 -0500
 @@ -1,4320 +0,0 @@
 -// !$*UTF8*$!
@@ -7648,7 +7648,7 @@ diff -ruN Logorrhea_Source_1.3.1/Logorrhea.pbproj/jan.pbxuser Logorrhea/Logorrhe
 -	};
 -}
 diff -ruN Logorrhea_Source_1.3.1/Logorrhea.pbproj/ladd.mode1 Logorrhea/Logorrhea.pbproj/ladd.mode1
---- Logorrhea_Source_1.3.1/Logorrhea.pbproj/ladd.mode1	2012-03-20 17:19:46.000000000 -0400
+--- Logorrhea_Source_1.3.1/Logorrhea.pbproj/ladd.mode1	2012-03-20 17:52:46.000000000 -0400
 +++ Logorrhea/Logorrhea.pbproj/ladd.mode1	1969-12-31 19:00:00.000000000 -0500
 @@ -1,1321 +0,0 @@
 -<?xml version="1.0" encoding="UTF-8"?>
@@ -8973,7 +8973,7 @@ diff -ruN Logorrhea_Source_1.3.1/Logorrhea.pbproj/ladd.mode1 Logorrhea/Logorrhea
 -</dict>
 -</plist>
 diff -ruN Logorrhea_Source_1.3.1/Logorrhea.pbproj/ladd.pbxuser Logorrhea/Logorrhea.pbproj/ladd.pbxuser
---- Logorrhea_Source_1.3.1/Logorrhea.pbproj/ladd.pbxuser	2012-03-20 17:19:46.000000000 -0400
+--- Logorrhea_Source_1.3.1/Logorrhea.pbproj/ladd.pbxuser	2012-03-20 17:52:46.000000000 -0400
 +++ Logorrhea/Logorrhea.pbproj/ladd.pbxuser	1969-12-31 19:00:00.000000000 -0500
 @@ -1,1307 +0,0 @@
 -// !$*UTF8*$!
@@ -10284,7 +10284,7 @@ diff -ruN Logorrhea_Source_1.3.1/Logorrhea.pbproj/ladd.pbxuser Logorrhea/Logorrh
 -	};
 -}
 diff -ruN Logorrhea_Source_1.3.1/Logorrhea.pbproj/project.pbxproj Logorrhea/Logorrhea.pbproj/project.pbxproj
---- Logorrhea_Source_1.3.1/Logorrhea.pbproj/project.pbxproj	2012-03-20 17:19:46.000000000 -0400
+--- Logorrhea_Source_1.3.1/Logorrhea.pbproj/project.pbxproj	2012-03-20 17:52:46.000000000 -0400
 +++ Logorrhea/Logorrhea.pbproj/project.pbxproj	1969-12-31 19:00:00.000000000 -0500
 @@ -1,978 +0,0 @@
 -// !$*UTF8*$!
@@ -11266,8 +11266,8 @@ diff -ruN Logorrhea_Source_1.3.1/Logorrhea.pbproj/project.pbxproj Logorrhea/Logo
 -	rootObject = 29B97313FDCFA39411CA2CEA;
 -}
 diff -ruN Logorrhea_Source_1.3.1/Logorrhea.pch Logorrhea/Logorrhea.pch
---- Logorrhea_Source_1.3.1/Logorrhea.pch	2012-03-20 17:19:46.000000000 -0400
-+++ Logorrhea/Logorrhea.pch	2009-06-06 13:54:48.000000000 -0400
+--- Logorrhea_Source_1.3.1/Logorrhea.pch	2012-03-20 17:52:46.000000000 -0400
++++ Logorrhea/Logorrhea.pch	2012-03-20 17:52:46.000000000 -0400
 @@ -7,7 +7,9 @@
   *
   */
@@ -11281,7 +11281,7 @@ diff -ruN Logorrhea_Source_1.3.1/Logorrhea.pch Logorrhea/Logorrhea.pch
  
 diff -ruN Logorrhea_Source_1.3.1/Logorrhea.xcodeproj/dhoerl.pbxuser Logorrhea/Logorrhea.xcodeproj/dhoerl.pbxuser
 --- Logorrhea_Source_1.3.1/Logorrhea.xcodeproj/dhoerl.pbxuser	1969-12-31 19:00:00.000000000 -0500
-+++ Logorrhea/Logorrhea.xcodeproj/dhoerl.pbxuser	2009-06-16 21:10:32.000000000 -0400
++++ Logorrhea/Logorrhea.xcodeproj/dhoerl.pbxuser	2012-03-20 17:52:46.000000000 -0400
 @@ -0,0 +1,719 @@
 +// !$*UTF8*$!
 +{
@@ -12004,7 +12004,7 @@ diff -ruN Logorrhea_Source_1.3.1/Logorrhea.xcodeproj/dhoerl.pbxuser Logorrhea/Lo
 +}
 diff -ruN Logorrhea_Source_1.3.1/Logorrhea.xcodeproj/dhoerl.perspectivev3 Logorrhea/Logorrhea.xcodeproj/dhoerl.perspectivev3
 --- Logorrhea_Source_1.3.1/Logorrhea.xcodeproj/dhoerl.perspectivev3	1969-12-31 19:00:00.000000000 -0500
-+++ Logorrhea/Logorrhea.xcodeproj/dhoerl.perspectivev3	2009-06-16 21:10:32.000000000 -0400
++++ Logorrhea/Logorrhea.xcodeproj/dhoerl.perspectivev3	2012-03-20 17:52:46.000000000 -0400
 @@ -0,0 +1,1577 @@
 +<?xml version="1.0" encoding="UTF-8"?>
 +<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -13584,7 +13584,7 @@ diff -ruN Logorrhea_Source_1.3.1/Logorrhea.xcodeproj/dhoerl.perspectivev3 Logorr
 +</dict>
 +</plist>
 diff -ruN Logorrhea_Source_1.3.1/Logorrhea.xcodeproj/jan.pbxuser Logorrhea/Logorrhea.xcodeproj/jan.pbxuser
---- Logorrhea_Source_1.3.1/Logorrhea.xcodeproj/jan.pbxuser	2012-03-20 17:19:46.000000000 -0400
+--- Logorrhea_Source_1.3.1/Logorrhea.xcodeproj/jan.pbxuser	2012-03-20 17:52:46.000000000 -0400
 +++ Logorrhea/Logorrhea.xcodeproj/jan.pbxuser	1969-12-31 19:00:00.000000000 -0500
 @@ -1,4320 +0,0 @@
 -// !$*UTF8*$!
@@ -17908,7 +17908,7 @@ diff -ruN Logorrhea_Source_1.3.1/Logorrhea.xcodeproj/jan.pbxuser Logorrhea/Logor
 -	};
 -}
 diff -ruN Logorrhea_Source_1.3.1/Logorrhea.xcodeproj/ladd.mode1 Logorrhea/Logorrhea.xcodeproj/ladd.mode1
---- Logorrhea_Source_1.3.1/Logorrhea.xcodeproj/ladd.mode1	2012-03-20 17:19:46.000000000 -0400
+--- Logorrhea_Source_1.3.1/Logorrhea.xcodeproj/ladd.mode1	2012-03-20 17:52:46.000000000 -0400
 +++ Logorrhea/Logorrhea.xcodeproj/ladd.mode1	1969-12-31 19:00:00.000000000 -0500
 @@ -1,1406 +0,0 @@
 -<?xml version="1.0" encoding="UTF-8"?>
@@ -19318,7 +19318,7 @@ diff -ruN Logorrhea_Source_1.3.1/Logorrhea.xcodeproj/ladd.mode1 Logorrhea/Logorr
 -</dict>
 -</plist>
 diff -ruN Logorrhea_Source_1.3.1/Logorrhea.xcodeproj/ladd.pbxuser Logorrhea/Logorrhea.xcodeproj/ladd.pbxuser
---- Logorrhea_Source_1.3.1/Logorrhea.xcodeproj/ladd.pbxuser	2012-03-20 17:19:46.000000000 -0400
+--- Logorrhea_Source_1.3.1/Logorrhea.xcodeproj/ladd.pbxuser	2012-03-20 17:52:46.000000000 -0400
 +++ Logorrhea/Logorrhea.xcodeproj/ladd.pbxuser	1969-12-31 19:00:00.000000000 -0500
 @@ -1,1372 +0,0 @@
 -// !$*UTF8*$!
@@ -20694,8 +20694,8 @@ diff -ruN Logorrhea_Source_1.3.1/Logorrhea.xcodeproj/ladd.pbxuser Logorrhea/Logo
 -	};
 -}
 diff -ruN Logorrhea_Source_1.3.1/Logorrhea.xcodeproj/project.pbxproj Logorrhea/Logorrhea.xcodeproj/project.pbxproj
---- Logorrhea_Source_1.3.1/Logorrhea.xcodeproj/project.pbxproj	2012-03-20 17:19:46.000000000 -0400
-+++ Logorrhea/Logorrhea.xcodeproj/project.pbxproj	2012-03-20 17:05:13.000000000 -0400
+--- Logorrhea_Source_1.3.1/Logorrhea.xcodeproj/project.pbxproj	2012-03-20 17:52:46.000000000 -0400
++++ Logorrhea/Logorrhea.xcodeproj/project.pbxproj	2012-03-20 17:52:46.000000000 -0400
 @@ -3,7 +3,7 @@
  	archiveVersion = 1;
  	classes = {
@@ -21006,7 +21006,7 @@ diff -ruN Logorrhea_Source_1.3.1/Logorrhea.xcodeproj/project.pbxproj Logorrhea/L
  		};
 diff -ruN Logorrhea_Source_1.3.1/Logorrhea.xcodeproj/project.xcworkspace/contents.xcworkspacedata Logorrhea/Logorrhea.xcodeproj/project.xcworkspace/contents.xcworkspacedata
 --- Logorrhea_Source_1.3.1/Logorrhea.xcodeproj/project.xcworkspace/contents.xcworkspacedata	1969-12-31 19:00:00.000000000 -0500
-+++ Logorrhea/Logorrhea.xcodeproj/project.xcworkspace/contents.xcworkspacedata	2012-02-08 09:51:59.000000000 -0500
++++ Logorrhea/Logorrhea.xcodeproj/project.xcworkspace/contents.xcworkspacedata	2012-03-20 17:52:46.000000000 -0400
 @@ -0,0 +1,7 @@
 +<?xml version="1.0" encoding="UTF-8"?>
 +<Workspace
@@ -21018,7 +21018,7 @@ diff -ruN Logorrhea_Source_1.3.1/Logorrhea.xcodeproj/project.xcworkspace/content
 Binary files Logorrhea_Source_1.3.1/Logorrhea.xcodeproj/project.xcworkspace/xcuserdata/dhoerl.xcuserdatad/UserInterfaceState.xcuserstate and Logorrhea/Logorrhea.xcodeproj/project.xcworkspace/xcuserdata/dhoerl.xcuserdatad/UserInterfaceState.xcuserstate differ
 diff -ruN Logorrhea_Source_1.3.1/Logorrhea.xcodeproj/project.xcworkspace/xcuserdata/dhoerl.xcuserdatad/WorkspaceSettings.xcsettings Logorrhea/Logorrhea.xcodeproj/project.xcworkspace/xcuserdata/dhoerl.xcuserdatad/WorkspaceSettings.xcsettings
 --- Logorrhea_Source_1.3.1/Logorrhea.xcodeproj/project.xcworkspace/xcuserdata/dhoerl.xcuserdatad/WorkspaceSettings.xcsettings	1969-12-31 19:00:00.000000000 -0500
-+++ Logorrhea/Logorrhea.xcodeproj/project.xcworkspace/xcuserdata/dhoerl.xcuserdatad/WorkspaceSettings.xcsettings	2012-03-20 08:14:52.000000000 -0400
++++ Logorrhea/Logorrhea.xcodeproj/project.xcworkspace/xcuserdata/dhoerl.xcuserdatad/WorkspaceSettings.xcsettings	2012-03-20 17:52:46.000000000 -0400
 @@ -0,0 +1,10 @@
 +<?xml version="1.0" encoding="UTF-8"?>
 +<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -21032,7 +21032,7 @@ diff -ruN Logorrhea_Source_1.3.1/Logorrhea.xcodeproj/project.xcworkspace/xcuserd
 +</plist>
 diff -ruN Logorrhea_Source_1.3.1/Logorrhea.xcodeproj/xcuserdata/dhoerl.xcuserdatad/xcdebugger/Breakpoints.xcbkptlist Logorrhea/Logorrhea.xcodeproj/xcuserdata/dhoerl.xcuserdatad/xcdebugger/Breakpoints.xcbkptlist
 --- Logorrhea_Source_1.3.1/Logorrhea.xcodeproj/xcuserdata/dhoerl.xcuserdatad/xcdebugger/Breakpoints.xcbkptlist	1969-12-31 19:00:00.000000000 -0500
-+++ Logorrhea/Logorrhea.xcodeproj/xcuserdata/dhoerl.xcuserdatad/xcdebugger/Breakpoints.xcbkptlist	2012-03-20 09:25:44.000000000 -0400
++++ Logorrhea/Logorrhea.xcodeproj/xcuserdata/dhoerl.xcuserdatad/xcdebugger/Breakpoints.xcbkptlist	2012-03-20 17:52:46.000000000 -0400
 @@ -0,0 +1,14 @@
 +<?xml version="1.0" encoding="UTF-8"?>
 +<Bucket
@@ -21050,7 +21050,7 @@ diff -ruN Logorrhea_Source_1.3.1/Logorrhea.xcodeproj/xcuserdata/dhoerl.xcuserdat
 +</Bucket>
 diff -ruN Logorrhea_Source_1.3.1/Logorrhea.xcodeproj/xcuserdata/dhoerl.xcuserdatad/xcschemes/Logorrhea.xcscheme Logorrhea/Logorrhea.xcodeproj/xcuserdata/dhoerl.xcuserdatad/xcschemes/Logorrhea.xcscheme
 --- Logorrhea_Source_1.3.1/Logorrhea.xcodeproj/xcuserdata/dhoerl.xcuserdatad/xcschemes/Logorrhea.xcscheme	1969-12-31 19:00:00.000000000 -0500
-+++ Logorrhea/Logorrhea.xcodeproj/xcuserdata/dhoerl.xcuserdatad/xcschemes/Logorrhea.xcscheme	2012-03-20 17:06:21.000000000 -0400
++++ Logorrhea/Logorrhea.xcodeproj/xcuserdata/dhoerl.xcuserdatad/xcschemes/Logorrhea.xcscheme	2012-03-20 17:52:46.000000000 -0400
 @@ -0,0 +1,85 @@
 +<?xml version="1.0" encoding="UTF-8"?>
 +<Scheme
@@ -21139,7 +21139,7 @@ diff -ruN Logorrhea_Source_1.3.1/Logorrhea.xcodeproj/xcuserdata/dhoerl.xcuserdat
 +</Scheme>
 diff -ruN Logorrhea_Source_1.3.1/Logorrhea.xcodeproj/xcuserdata/dhoerl.xcuserdatad/xcschemes/xcschememanagement.plist Logorrhea/Logorrhea.xcodeproj/xcuserdata/dhoerl.xcuserdatad/xcschemes/xcschememanagement.plist
 --- Logorrhea_Source_1.3.1/Logorrhea.xcodeproj/xcuserdata/dhoerl.xcuserdatad/xcschemes/xcschememanagement.plist	1969-12-31 19:00:00.000000000 -0500
-+++ Logorrhea/Logorrhea.xcodeproj/xcuserdata/dhoerl.xcuserdatad/xcschemes/xcschememanagement.plist	2012-02-08 09:51:59.000000000 -0500
++++ Logorrhea/Logorrhea.xcodeproj/xcuserdata/dhoerl.xcuserdatad/xcschemes/xcschememanagement.plist	2012-03-20 17:52:46.000000000 -0400
 @@ -0,0 +1,22 @@
 +<?xml version="1.0" encoding="UTF-8"?>
 +<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -21164,8 +21164,8 @@ diff -ruN Logorrhea_Source_1.3.1/Logorrhea.xcodeproj/xcuserdata/dhoerl.xcuserdat
 +</dict>
 +</plist>
 diff -ruN Logorrhea_Source_1.3.1/MyTableView.m Logorrhea/MyTableView.m
---- Logorrhea_Source_1.3.1/MyTableView.m	2012-03-20 17:19:46.000000000 -0400
-+++ Logorrhea/MyTableView.m	2012-03-20 08:14:53.000000000 -0400
+--- Logorrhea_Source_1.3.1/MyTableView.m	2012-03-20 17:52:46.000000000 -0400
++++ Logorrhea/MyTableView.m	2012-03-20 17:52:46.000000000 -0400
 @@ -79,7 +79,7 @@
      stripeRect.size.height = fullRowHeight;
      // set the color
@@ -21176,8 +21176,8 @@ diff -ruN Logorrhea_Source_1.3.1/MyTableView.m Logorrhea/MyTableView.m
      // and draw the stripes
      while (stripeRect.origin.y < clipBottom)
 diff -ruN Logorrhea_Source_1.3.1/OASplitView.h Logorrhea/OASplitView.h
---- Logorrhea_Source_1.3.1/OASplitView.h	2012-03-20 17:19:46.000000000 -0400
-+++ Logorrhea/OASplitView.h	2012-03-20 09:02:05.000000000 -0400
+--- Logorrhea_Source_1.3.1/OASplitView.h	2012-03-20 17:52:46.000000000 -0400
++++ Logorrhea/OASplitView.h	2012-03-20 17:52:46.000000000 -0400
 @@ -3,7 +3,7 @@
  // This software may only be used and reproduced according to the
  // terms in the file OmniSourceLicense.html, which should be
@@ -21188,8 +21188,8 @@ diff -ruN Logorrhea_Source_1.3.1/OASplitView.h Logorrhea/OASplitView.h
  // $Header: /Network/Source/CVS/OmniGroup/Frameworks/OmniAppKit/Widgets.subproj/OASplitView.h,v 1.3 2002/03/09 01:53:58 kc Exp $
  
 diff -ruN Logorrhea_Source_1.3.1/OASplitView.m Logorrhea/OASplitView.m
---- Logorrhea_Source_1.3.1/OASplitView.m	2012-03-20 17:19:46.000000000 -0400
-+++ Logorrhea/OASplitView.m	2012-03-20 09:02:05.000000000 -0400
+--- Logorrhea_Source_1.3.1/OASplitView.m	2012-03-20 17:52:46.000000000 -0400
++++ Logorrhea/OASplitView.m	2012-03-20 17:52:46.000000000 -0400
 @@ -3,7 +3,7 @@
  // This software may only be used and reproduced according to the
  // terms in the file OmniSourceLicense.html, which should be
@@ -21221,7 +21221,7 @@ diff -ruN Logorrhea_Source_1.3.1/OASplitView.m Logorrhea/OASplitView.m
          if ((subviewFrameStrings = [userDefaults arrayForKey:[self positionAutosaveName]]) != nil) {
 diff -ruN Logorrhea_Source_1.3.1/OmniSourceLicense.html Logorrhea/OmniSourceLicense.html
 --- Logorrhea_Source_1.3.1/OmniSourceLicense.html	1969-12-31 19:00:00.000000000 -0500
-+++ Logorrhea/OmniSourceLicense.html	2012-03-20 09:02:05.000000000 -0400
++++ Logorrhea/OmniSourceLicense.html	2012-03-20 17:52:46.000000000 -0400
 @@ -0,0 +1,29 @@
 +<!-- $Header$ -->
 +<html>
@@ -21254,8 +21254,8 @@ diff -ruN Logorrhea_Source_1.3.1/OmniSourceLicense.html Logorrhea/OmniSourceLice
 +</html> 
 \ No newline at end of file
 diff -ruN Logorrhea_Source_1.3.1/Presentity.h Logorrhea/Presentity.h
---- Logorrhea_Source_1.3.1/Presentity.h	2012-03-20 17:19:46.000000000 -0400
-+++ Logorrhea/Presentity.h	2009-06-06 13:37:27.000000000 -0400
+--- Logorrhea_Source_1.3.1/Presentity.h	2012-03-20 17:52:46.000000000 -0400
++++ Logorrhea/Presentity.h	2012-03-20 17:52:46.000000000 -0400
 @@ -6,20 +6,19 @@
  //  Copyright (c) 2003 Spiny. All rights reserved.
  //
@@ -21281,8 +21281,8 @@ diff -ruN Logorrhea_Source_1.3.1/Presentity.h Logorrhea/Presentity.h
  
  @end
 diff -ruN Logorrhea_Source_1.3.1/Presentity.m Logorrhea/Presentity.m
---- Logorrhea_Source_1.3.1/Presentity.m	2012-03-20 17:19:46.000000000 -0400
-+++ Logorrhea/Presentity.m	2012-03-20 08:14:53.000000000 -0400
+--- Logorrhea_Source_1.3.1/Presentity.m	2012-03-20 17:52:46.000000000 -0400
++++ Logorrhea/Presentity.m	2012-03-20 17:52:46.000000000 -0400
 @@ -8,7 +8,6 @@
  
  #import "Presentity.h"
